@@ -1,65 +1,98 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import ContentBlock from "../components/ContentBlock.js";
+import React, { useState } from "react";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const [news, setNews] = useState([
+    "I am thrilled to accept my invitation to join the University of Western Australia's System Health Lab research group.",
+    "In November 2020 I founded an Abstract Algebra and Category Theory reading group. Book covered: Steve Awodey's Category Theory (2nd edition).",
+    "In November 2020 I helped found a reading group on Information Theory and Bayesian Statistics. Books/Materials covered in the group: David MacKay's: Information Theory, Inference, and Learning, Stanford's Statistics 311/Electrical Engineering 377 lecture notes by John Duchi.",
+    "I am thrilled to have acheived the highest mark overall and 100% in the final exam for CITS2002: Systems Programming, taught by Dr Chris McDonald.",
+    "In November 2020, with a team of collegues, I completed Stanford's CS330: Deep Multi-Task and Meta Learning graduate course.",
+    "I am honoured to have worked as a coordinator for Teach Learn Grow's eMentor program.",
+    "I am honoured to be elected as the latest committee member at the Coders for Causes.",
+    "In Summer 2019, I founded and ran a Reinforcement Learning research paper reading group.",
+    "I am honoured to be awarded the Australia and New Zealand Chartered Accountants Most Outstanding Economics Student.",
+  ]);
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Michael Nefiodovas</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
+        <div className={styles.content}>
+          <h1 className={styles.title}>Michael Nefiodovas</h1>
+          <address className={styles.contact}>
+            michael at nef dot net dot au
+          </address>
+          <img
+            className={styles.image}
+            src="/face.png"
+            alt="A photograph of Michael Nefiodovas"
+          />
+          <div className={styles.bio}>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              I am an undergraduate student undertaking the{" "}
+              <a href="https://www.uwa.edu.au/study/courses/bachelor-of-philosophy">
+                Bachelor of Philosophy (Honours)
+              </a>{" "}
+              degree with a major in{" "}
+              <a href="https://www.uwa.edu.au/ems/schools/physics-mathematics-and-computing/mathematics-and-stats">
+                Mathematics and Statistics
+              </a>{" "}
+              at{" "}
+              <a href="https://www.uwa.edu.au/">
+                The University of Western Australia
+              </a>
+              . I currently work as a Research Engineer at{" "}
+              <a href="https://systemhealthlab.com/">System Health Lab</a>. In
+              2019 I founded Steamhunt, a commercial data aggregation platform.{" "}
             </p>
-          </a>
+            <p>
+              <em>
+                I am interested in how we can exploit statistics to practically
+                improve decision making in highly complex and unpredictable
+                environments.
+              </em>
+            </p>
+            <p>
+              Previously, I studied at{" "}
+              <a href="https://www.duncraigshs.wa.edu.au/">
+                Duncraig Senior High School
+              </a>{" "}
+              acheiving an ATAR score of 98.2.
+            </p>
+          </div>
+          <div className={styles.links}>
+            <a href="">CV</a> /{" "}
+            <a href="https://github.com/MouseAndKeyboard">GitHub</a> /{" "}
+            <a href="https://research-repository.uwa.edu.au/en/persons/michael-nefiodovas">
+              Research Profile
+            </a>
+          </div>
+
+          <div className={styles.info}>
+            <ContentBlock heading="News" descriptions={news} />
+            <ContentBlock heading="Blog" descriptions={["I don't have one"]} />
+            <ContentBlock heading="Projects" descriptions={["This website"]} />
+            <ContentBlock
+              heading="Academic Results"
+              descriptions={["CITS2002"]}
+            />
+          </div>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
+        <p>
+          Webpage design inspired by:{" "}
+          <a href="https://jonbarron.info/">Jon Barron</a>
+        </p>
       </footer>
     </div>
-  )
+  );
 }
