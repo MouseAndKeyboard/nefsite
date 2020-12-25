@@ -6,14 +6,23 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
   const [news, setNews] = useState([
     "I am thrilled to accept my invitation to join the University of Western Australia's System Health Lab research group.",
-    "In November 2020 I founded an Abstract Algebra and Category Theory reading group. Book covered: Steve Awodey's Category Theory (2nd edition).",
-    "In November 2020 I helped found a reading group on Information Theory and Bayesian Statistics. Books/Materials covered in the group: David MacKay's: Information Theory, Inference, and Learning, Stanford's Statistics 311/Electrical Engineering 377 lecture notes by John Duchi.",
+    "In November 2020, I founded an Abstract Algebra and Category Theory reading group. Book covered: Steve Awodey's Category Theory (2nd edition).",
+    "In November 2020, I helped found a reading group on Information Theory and Bayesian Statistics. Books/Materials covered in the group: David MacKay's: Information Theory, Inference, and Learning, Stanford's Statistics 311/Electrical Engineering 377 lecture notes by John Duchi.",
     "I am thrilled to have acheived the highest mark overall and 100% in the final exam for CITS2002: Systems Programming, taught by Dr Chris McDonald.",
     "In November 2020, with a team of collegues, I completed Stanford's CS330: Deep Multi-Task and Meta Learning graduate course.",
     "I am honoured to have worked as a coordinator for Teach Learn Grow's eMentor program.",
+    "In March 2020, I worked with 9 other students to foster the largest University Computer Science and Data Science online community during Covid-19.",
     "I am honoured to be elected as the latest committee member at the Coders for Causes.",
     "In Summer 2019, I founded and ran a Reinforcement Learning research paper reading group.",
     "I am honoured to be awarded the Australia and New Zealand Chartered Accountants Most Outstanding Economics Student.",
+  ]);
+
+  const [projects, setProjects] = useState([
+    "Implemented a Generative Adversarial Network (GAN) based on the original research paper: github.com/MouseAndKeyboard/GAN/blob/master/gan.org",
+    ,
+    "Founded Steamhunt, an online scraping and data-aggregation business.",
+    "Developed my own OpenAI Gym environment for reinforcement learning: github.com/MouseAndKeyboard/gym-spoof",
+    "Performed a statistical analysis on mammogram data: github.com/MouseAndKeyboard/mammogram-analysis",
   ]);
 
   return (
@@ -79,6 +88,7 @@ export default function Home() {
           </div>
 
           <div className={styles.info}>
+            <ContentBlock heading="Projects" descriptions={projects} />
             <ContentBlock heading="News" descriptions={news} />
           </div>
         </div>
