@@ -29,11 +29,14 @@ export default function Home() {
           <address className={styles.contact}>
             michael at nef dot net dot au
           </address>
-          <img
-            className={styles.image}
-            src="/face.png"
-            alt="A photograph of Michael Nefiodovas"
-          />
+          <div className={styles.image}>
+            <img
+              className={styles.image}
+              src="/face.png"
+              alt="A photograph of Michael Nefiodovas"
+            />
+          </div>
+
           <div className={styles.bio}>
             <p>
               I am an undergraduate student undertaking the{" "}
