@@ -138,9 +138,8 @@ export default function Home() {
             </p>
             <p>
               <em>
-                I am interested in how we can exploit statistics to practically
-                improve decision making in highly complex and unpredictable
-                environments.
+                I am interested in how we can use mathematics and statistics to
+                glean insights and unique perspectives on agent based systems.
               </em>
             </p>
             <p>
