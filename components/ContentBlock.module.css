@@ -1,0 +1,11 @@
+.expander {
+  color: #0070f3;
+  cursor: pointer;
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+}
+
+.subheading {
+  color: #fb9600;
+}
