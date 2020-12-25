@@ -77,12 +77,6 @@ export default function Home() {
 
           <div className={styles.info}>
             <ContentBlock heading="News" descriptions={news} />
-            <ContentBlock heading="Blog" descriptions={["I don't have one"]} />
-            <ContentBlock heading="Projects" descriptions={["This website"]} />
-            <ContentBlock
-              heading="Academic Results"
-              descriptions={["CITS2002"]}
-            />
           </div>
         </div>
       </main>
