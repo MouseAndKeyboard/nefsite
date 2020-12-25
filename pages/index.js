@@ -33,7 +33,7 @@ export default function Home() {
       .
     </>,
     <>
-      I am thrilled to have acheived the highest mark overall and 100% in the
+      I am thrilled to have received the highest mark overall and 100% in the
       final exam for{" "}
       <a href="https://handbooks.uwa.edu.au/unitdetails?code=CITS2002">
         CITS2002: Systems Programming
@@ -70,7 +70,7 @@ export default function Home() {
       .
     </>,
     <>
-      I am honoured to be awarded the Australia and New Zealand Chartered
+      I am honoured to have recieved the Australia and New Zealand Chartered
       Accountants Most Outstanding Economics Student.
     </>,
   ]);
