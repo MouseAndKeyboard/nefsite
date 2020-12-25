@@ -37,9 +37,7 @@ const Description = ({ description }) => {
 
 const ContentBlock = ({ heading, descriptions }) => {
   const ContentItems = descriptions.map((desc, idx) => (
-    <li key={idx}>
-      <Description description={desc} />
-    </li>
+    <li key={idx}>{desc}</li>
   ));
 
   return (
