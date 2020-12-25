@@ -43,7 +43,7 @@ const ContentBlock = ({ heading, descriptions }) => {
   return (
     <>
       <h2 className={styles.subheading}>{heading}</h2>
-      <ul>{ContentItems}</ul>
+      <ul className={styles.bullets}>{ContentItems}</ul>
     </>
   );
 };
