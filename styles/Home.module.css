@@ -1,18 +1,30 @@
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.content {
+  padding-top: 3rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1rem 1fr 2fr;
+  grid-template-rows: 4rem 2rem auto 2rem auto;
+  grid-template-areas:
+    ". heading heading . . ."
+    ". mail mail . . ."
+    ". bio bio . image ."
+    ". links links . image ."
+    ". primary primary primary primary .";
+}
+
 .main {
-  padding: 5rem 0;
+  padding: 0 0;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: primary;
   align-items: center;
 }
 
@@ -47,14 +59,49 @@
 }
 
 .title {
+  grid-area: heading;
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  vertical-align: bottom;
+  font-size: 3rem;
+}
+
+.links {
+  grid-area: links;
+}
+
+.image {
+  grid-area: image;
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.contact {
+  grid-area: mail;
+}
+
+.bio {
+  grid-area: bio;
+  line-height: 1.5;
+}
+
+.info {
+  grid-area: primary;
+}
+
+.info p {
+  text-align: left;
 }
 
 .title,
-.description {
+.contact,
+.links {
   text-align: center;
+}
+
+.subheading {
+  color: #fb9600;
 }
 
 .description {
