@@ -77,7 +77,7 @@ export default function Home() {
 
   const [projects, setProjects] = useState([
     <>
-      <a href="github.com/MouseAndKeyboard/GAN/blob/master/gan.org">
+      <a href="https://github.com/MouseAndKeyboard/GAN/blob/master/gan.org">
         Implemented a Generative Adversarial Network (GAN).
       </a>{" "}
       to generate hand drawn digits.
@@ -85,12 +85,14 @@ export default function Home() {
     <>Founded Steamhunt, an online scraping and data-aggregation business.</>,
     <>
       Developed a{" "}
-      <a href="github.com/MouseAndKeyboard/gym-spoof">OpenAI Gym environment</a>{" "}
+      <a href="https://github.com/MouseAndKeyboard/gym-spoof">
+        OpenAI Gym environment
+      </a>{" "}
       for reinforcement learning:
     </>,
     <>
       Performed a{" "}
-      <a href="github.com/MouseAndKeyboard/mammogram-analysis">
+      <a href="https://github.com/MouseAndKeyboard/mammogram-analysis">
         statistical analysis on mammogram data
       </a>
       .
@@ -143,19 +145,20 @@ export default function Home() {
               </em>
             </p>
             <p>
-              Previously, I studied at{" "}
+              I am greatful to have previously studied at{" "}
               <a href="https://www.duncraigshs.wa.edu.au/">
                 Duncraig Senior High School
               </a>{" "}
-              acheiving an ATAR score of 98.2.
+              as they enabled me to receive an ATAR score of 98.2.
             </p>
           </div>
           <div className={styles.links}>
             <a href="">CV</a> /{" "}
-            <a href="https://github.com/MouseAndKeyboard">GitHub</a> /{" "}
-            <a href="https://research-repository.uwa.edu.au/en/persons/michael-nefiodovas">
-              Research Profile
-            </a>
+            <a href="https://github.com/MouseAndKeyboard">GitHub</a>
+            {/*  /{" "} */}
+            {/* <a href="https://research-repository.uwa.edu.au/en/persons/michael-nefiodovas"> */}
+            {/*   Research Profile */}
+            {/* </a> */}
           </div>
 
           <div className={styles.info}>
