@@ -9,8 +9,8 @@ export default function Home() {
       I am thrilled to accept my invitation to join the{" "}
       <a href="https://systemhealthlab.com/">
         University of Western Australia's System Health Lab
-      </a>{" "}
-      research group.
+      </a>
+      .
     </>,
     <>
       In November 2020, I founded an Abstract Algebra and Category Theory
