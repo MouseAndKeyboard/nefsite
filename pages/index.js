@@ -78,7 +78,7 @@ export default function Home() {
   const [projects, setProjects] = useState([
     <>
       <a href="https://github.com/MouseAndKeyboard/GAN/blob/master/gan.org">
-        Implemented a Generative Adversarial Network (GAN).
+        Implemented a Generative Adversarial Network (GAN)
       </a>{" "}
       to generate hand drawn digits.
     </>,
