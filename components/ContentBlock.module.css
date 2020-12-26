@@ -6,10 +6,18 @@
   padding: 0 !important;
 }
 
+.center {
+  text-align: center;
+}
+
 .subheading {
   color: #fb9600;
 }
 
 .bullets > li {
   padding: 0.4rem 0px;
+}
+
+.contentBlock {
+  margin-bottom: 2rem;
 }
