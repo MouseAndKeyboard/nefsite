@@ -28,6 +28,11 @@ const Grades = () => {
       <Head>
         <title>Grades | Michael Nefiodovas</title>
       </Head>
+
+      <div className={styles.gohome}>
+        <a href="/">◂ Home</a>
+      </div>
+
       <main className={styles.main}>
         <h1 className={styles.title}>Michael Nefiodovas's Grades</h1>
         <h2 className={styles.subtitle}>

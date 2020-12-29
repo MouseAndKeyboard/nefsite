@@ -154,7 +154,8 @@ export default function Home() {
           </div>
           <div className={styles.links}>
             <a href="">CV</a> /{" "}
-            <a href="https://github.com/MouseAndKeyboard">GitHub</a>
+            <a href="https://github.com/MouseAndKeyboard">GitHub</a> /{" "}
+            <a href="/grades">Grades</a>
             {/*  /{" "} */}
             {/* <a href="https://research-repository.uwa.edu.au/en/persons/michael-nefiodovas"> */}
             {/*   Research Profile */}
