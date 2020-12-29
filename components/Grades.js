@@ -8,7 +8,7 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import styles from "./Grades.module.css";
 
-const createData = (name, code, mark, grade) => {
+export const createData = (name, code, mark, grade) => {
   return {
     name: name,
     code: code,
@@ -17,19 +17,7 @@ const createData = (name, code, mark, grade) => {
   };
 };
 
-const Grades = () => {
-  const [grades, setGrades] = useState([
-    createData("Software Engineering with Java", "CITS1001", 91, "HD"),
-    createData("Microeconomics: Prices and Markets", "ECON1101", 94, "HD"),
-    createData("Microeconomics: Prices and Markets", "ECON1101", 94, "HD"),
-    createData("Microeconomics: Prices and Markets", "ECON1101", 94, "HD"),
-    createData("Microeconomics: Prices and Markets", "ECON1101", 94, "HD"),
-    createData("Microeconomics: Prices and Markets", "ECON1101", 94, "HD"),
-    createData("Microeconomics: Prices and Markets", "ECON1101", 94, "HD"),
-    createData("Microeconomics: Prices and Markets", "ECON1101", 94, "HD"),
-    createData("Microeconomics: Prices and Markets", "ECON1101", 94, "HD"),
-  ]);
-
+const Grades = ({ grades }) => {
   const rows = grades.map((row) => (
     <TableRow key={row.code}>
       <TableCell component="th" scope="row">
