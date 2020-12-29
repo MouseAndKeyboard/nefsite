@@ -31,7 +31,7 @@ const Grades = () => {
       <main className={styles.main}>
         <h1 className={styles.title}>Michael Nefiodovas's Grades</h1>
         <h2 className={styles.subtitle}>
-          University of Western Australia Grades
+          Grades from The University of Western Australia
         </h2>
         <p>
           GPA: 7.0 <span className={styles.weak}>(/7.0)</span> <br /> WAM: {wam}{" "}
