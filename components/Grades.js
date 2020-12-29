@@ -8,14 +8,12 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import styles from "./Grades.module.css";
 
-export const createData = (name, code, mark, grade) => {
-  return {
-    name: name,
-    code: code,
-    mark: mark,
-    grade: grade,
-  };
-};
+export const createData = (name, code, mark, grade) => ({
+  name,
+  code,
+  mark,
+  grade,
+});
 
 const Grades = ({ grades }) => {
   const rows = grades.map((row) => (
@@ -30,13 +28,13 @@ const Grades = ({ grades }) => {
   ));
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer>
       <Table className={styles.table} aria-label="university grades table">
         <TableHead>
           <TableRow>
             <TableCell>Name</TableCell>
             <TableCell align="right">Code</TableCell>
-            <TableCell align="right">Mark (/100)</TableCell>
+            <TableCell align="right">Mark</TableCell>
             <TableCell align="right">Grade</TableCell>
           </TableRow>
         </TableHead>
