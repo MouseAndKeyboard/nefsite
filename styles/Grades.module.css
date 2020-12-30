@@ -16,17 +16,40 @@
     ". main .";
 }
 
+.title {
+  margin: 0;
+  line-height: 1.15;
+  text-align: center;
+  vertical-align: bottom;
+  font-size: 2rem;
+}
+
+.gohome {
+  margin: 1rem 2rem 2rem 2rem;
+  grid-area: header;
+}
+
+.subtitle {
+  font-size: 1rem;
+
+  text-align: center;
+  color: #858585;
+}
+
 @media (min-width: 750px) {
   .content {
     column-gap: 1rem;
     grid-template-columns: 1rem 1fr 1rem;
   }
 
+  .gohome {
+    margin: 1rem 0 2rem 0;
+  }
   .title {
     font-size: 3rem;
   }
   .subtitle {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -44,26 +67,6 @@
       ". header ."
       ". main .";
   }
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  text-align: center;
-  vertical-align: bottom;
-  font-size: 2rem;
-}
-
-.gohome {
-  margin: 1rem 0 2rem 0;
-  grid-area: header;
-}
-
-.subtitle {
-  font-size: 1rem;
-
-  text-align: center;
-  color: #858585;
 }
 
 .weak {
