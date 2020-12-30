@@ -170,10 +170,18 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <p>
-          Webpage design inspired by:{" "}
-          <a href="https://jonbarron.info/">Jon Barron</a>
-        </p>
+        <div className={styles.footerlinks}>
+          <p>
+            Webpage design inspired by:{" "}
+            <a href="https://jonbarron.info/">Jon Barron</a>
+          </p>
+          <p>
+            View website stats:
+            <a href="https://simpleanalytics.com/nefsite.vercel.app">
+              Simple Analytics
+            </a>
+          </p>
+        </div>
       </footer>
     </div>
   );
