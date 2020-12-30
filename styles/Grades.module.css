@@ -1,5 +1,5 @@
 .main {
-  padding: 3rem 30% 3rem 30%;
+  grid-area: main;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -7,20 +7,60 @@
   align-items: center;
 }
 
+.content {
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 0rem 1fr 0rem;
+  grid-template-areas:
+    ". header ."
+    ". main .";
+}
+
+@media (min-width: 750px) {
+  .content {
+    column-gap: 1rem;
+    grid-template-columns: 1rem 1fr 1rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .content {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+      ". header ."
+      ". main .";
+  }
+}
+@media (min-width: 1630px) {
+  .content {
+    grid-template-areas:
+      ". header ."
+      ". main .";
+  }
+}
+
 .title {
   margin: 0;
   line-height: 1.15;
   text-align: center;
   vertical-align: bottom;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .gohome {
-  padding: 2rem 30% 0rem 30%;
+  margin: 1rem 0 2rem 0;
+  grid-area: header;
 }
 
 .subtitle {
-  font-size: 1.5rem;
+  font-size: 1rem;
 
   text-align: center;
   color: #858585;
