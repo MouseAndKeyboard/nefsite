@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
   const [news, setNews] = useState([
     <>
-      I am thrilled to accept my invitation to join the{" "}
+      In December 2020, I accepted an offer to join the{" "}
       <a href="https://systemhealthlab.com/">
         University of Western Australia's System Health Lab
       </a>
@@ -33,7 +33,7 @@ export default function Home() {
       .
     </>,
     <>
-      I am thrilled to have received the highest mark overall and 100% in the
+      In Semester 2 2020, I received the highest mark overall and 100% in the
       final exam for{" "}
       <a href="https://handbooks.uwa.edu.au/unitdetails?code=CITS2002">
         CITS2002: Systems Programming
@@ -41,14 +41,14 @@ export default function Home() {
       , taught by Dr Chris McDonald.
     </>,
     <>
-      In November 2020, with a team of collegues, I completed Stanford's{" "}
+      In November 2020, with a team of collegues, we worked through Stanford's{" "}
       <a href="https://cs330.stanford.edu/">
         CS330: Deep Multi-Task and Meta Learning
       </a>{" "}
-      graduate course.
+      course material.
     </>,
     <>
-      I am honoured to have worked as a coordinator for{" "}
+      In March 2020, I worked as a coordinator for{" "}
       <a href="https://www.teachlearngrow.org.au/">Teach Learn Grow</a>'s{" "}
       <a href="https://www.teachlearngrow.org.au/ementor">eMentor program</a>.
     </>,
@@ -58,20 +58,20 @@ export default function Home() {
       Covid-19.
     </>,
     <>
-      I am honoured to be elected as the latest committee member at the{" "}
+      In February 2020, I was elected as the latest committee member at the{" "}
       <a href="https://codersforcauses.org/">Coders for Causes</a>.
     </>,
     <>
-      In Summer 2019, I founded and ran a Reinforcement Learning research paper
-      reading group. You can find some of my{" "}
+      In November 2019, I founded and ran a Reinforcement Learning research
+      paper reading group. You can find some of my{" "}
       <a href="https://github.com/MouseAndKeyboard/rg-generative">
         notes on github
       </a>
       .
     </>,
     <>
-      I am honoured to have recieved the Australia and New Zealand Chartered
-      Accountants Most Outstanding Economics Student.
+      In November 2019, I recieved the Australia and New Zealand Chartered
+      Accountants Most Outstanding Economics Student award.
     </>,
   ]);
 
