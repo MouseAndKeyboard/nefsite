@@ -82,7 +82,18 @@ export default function Home() {
       </a>{" "}
       to generate hand drawn digits.
     </>,
-    <>Founded Steamhunt, an online scraping and data-aggregation business.</>,
+    <>
+      Founded Steamhunt, an online scraping and data-aggregation business. The
+      site has two primary features: A{" "}
+      <a href="https://www.youtube.com/watch?v=3PMlZw_JsZE">
+        Steam avatar reverse image searcher
+      </a>{" "}
+      and a{" "}
+      <a href="https://www.youtube.com/watch?v=tByvaRQgQzg">
+        Steam Community Market scraper
+      </a>
+      .
+    </>,
     <>
       Developed a{" "}
       <a href="https://github.com/MouseAndKeyboard/gym-spoof">
