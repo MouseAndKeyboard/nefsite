@@ -126,7 +126,7 @@ export default function Home() {
           <div className={styles.image}>
             <img
               className={styles.image}
-              src="/face.png"
+              src="/face.jpg"
               alt="A photograph of Michael Nefiodovas"
             />
           </div>
