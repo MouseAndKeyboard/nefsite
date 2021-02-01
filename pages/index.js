@@ -156,11 +156,11 @@ export default function Home() {
               </em>
             </p>
             <p>
-              I am greatful to have previously studied at{" "}
+              In 2019 I graduated from{" "}
               <a href="https://www.duncraigshs.wa.edu.au/">
                 Duncraig Senior High School
-              </a>{" "}
-              as they enabled me to receive an ATAR score of 98.2.
+              </a>
+              {". "}
             </p>
           </div>
           <div className={styles.links}>
