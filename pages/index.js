@@ -151,8 +151,8 @@ export default function Home() {
             </p>
             <p>
               <em>
-                I am interested in how we can use mathematics and statistics to
-                glean insights and unique perspectives on agent based systems.
+                I am interested in how we can use higher level mathematics to
+                formalise and interpret agent based systems.
               </em>
             </p>
             <p>
