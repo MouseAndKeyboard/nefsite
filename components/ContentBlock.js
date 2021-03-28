@@ -1,19 +1,21 @@
 import styles from "./ContentBlock.module.css";
 import React, { useState } from "react";
 
-const ContentBlock = ({ heading, descriptions }) => {
+import ContentItem from "./ContentItem";
+
+const ContentBlock = ({ heading, data }) => {
   const [showMore, setShowMore] = useState(false);
 
-  const BULLET_COUNT = 5;
+  const BULLET_COUNT = 20;
 
   let ContentItems = [];
   let expander = <></>;
-  if (descriptions.length >= BULLET_COUNT) {
+  if (data.length >= BULLET_COUNT) {
     const toShow = showMore
-      ? descriptions
-      : descriptions.slice(0, BULLET_COUNT);
+      ? data
+      : data.slice(0, BULLET_COUNT);
 
-    ContentItems = toShow.map((desc, idx) => <li key={idx}>{desc}</li>);
+    ContentItems = toShow.map((record, idx) => <ContentItem key={idx} {...record} />);
 
     const word = showMore ? <>Show Less ▴</> : <>Show More ▾</>;
     expander = (
@@ -27,7 +29,7 @@ const ContentBlock = ({ heading, descriptions }) => {
       </div>
     );
   } else {
-    ContentItems = descriptions.map((desc, idx) => <li key={idx}>{desc}</li>);
+    ContentItems = data.map((record, idx) => <ContentItem key={idx} {...record} />);
   }
 
   return (

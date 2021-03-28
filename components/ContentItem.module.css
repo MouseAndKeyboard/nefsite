@@ -1,0 +1,38 @@
+.muted {
+    grid-area: longago;
+    color: #999999;
+}
+
+.title {
+    grid-area: title;
+    margin: 0;
+}
+
+.desc {
+    grid-area: description;
+    margin-bottom: 15px;
+}
+
+.date {
+    grid-area: date;
+    justify-self: right;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr 9fr 2fr;
+    column-gap: 1.5rem;
+    grid-template-areas:
+        "image title date"
+        "image longago longago"
+        "image description description"
+}
+
+.image {
+    grid-area: image;
+    align-self: center;
+    justify-self: center;
+    max-width: 150px;
+    max-height: 150px;
+    display: block; /* remove extra space below image */
+}

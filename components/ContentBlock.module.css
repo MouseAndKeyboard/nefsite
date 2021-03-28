@@ -14,8 +14,15 @@
   color: #fb9600;
 }
 
-.bullets > li {
+.bullets {
+    disply: flex;
+    flex-direction: down;
+
+}
+
+.bullets > * {
   padding: 0.4rem 0px;
+  margin: 0.6rem;
 }
 
 .contentBlock {
