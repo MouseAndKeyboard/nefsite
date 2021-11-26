@@ -24,7 +24,7 @@ const Grades = () => {
             Grades from The University of Western Australia
           </h2>
           <p>
-            GPA: 7.0 <span className={styles.weak}>(/7.0)</span> <br /> WAM:{" "}
+            GPA: 6.9 <span className={styles.weak}>(/7.0)</span> <br /> WAM:{" "}
             {wam} <span className={styles.weak}>(/100.00)</span>
           </p>
           <GradesPage grades={uniGrades} />
