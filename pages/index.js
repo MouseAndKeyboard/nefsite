@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import styles from "../styles/Home.module.css";
 import projects from "../components/data/projects.js";
 import news from "../components/data/news.js";
+import Eye from "../components/Eye.js";
 
 export default function Home() {
   return (
@@ -44,6 +45,8 @@ export default function Home() {
               . I currently work as a Research Engineer at{" "}
               <a href="https://systemhealthlab.com/">System Health Lab</a>. In
               2019 I founded Steamhunt, a commercial data aggregation platform.{" "}
+
+              <Eye />
             </p>
             <p>
               {/* <em> */}
