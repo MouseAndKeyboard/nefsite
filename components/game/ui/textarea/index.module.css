@@ -1,0 +1,46 @@
+.textArea {
+    position: fixed;
+    border-radius: 10px;
+    border: 6px solid #dfe5e6;
+    background-color: black;
+    width: 70vw;
+    height: 25vh;
+    left: 10vw;
+    bottom: 3vh;
+    overflow: scroll;
+    opacity: 1;
+    transition: opacity .1s ease-in;
+    transition-delay: 0.1s;
+}
+
+.textAreaHover {
+    position: fixed;
+    border-radius: 10px;
+    border: 6px solid #dfe5e6;
+    background-color: black;
+    width: 70vw;
+    height: 25vh;
+    left: 10vw;
+    bottom: 3vh;
+    overflow: scroll;
+    opacity: 0.1;
+    transition: opacity .1s ease-out;
+    transition-delay: 0s;
+}
+
+.inner {
+    margin: 1em;
+}
+
+.header {
+    color: white;
+    text-align: center;
+    font-size: 23pt;
+    font-weight: bold;
+}
+
+.text {
+    color: white;
+    font-size: 19pt;
+
+}
