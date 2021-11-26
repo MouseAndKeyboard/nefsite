@@ -21,4 +21,14 @@ export default [
   createData("Discrete Structures", "CITS2211", 87, "HD"),
   createData("Multivariable Calculus", "MATH1011", 85, "HD"),
   createData("Mathematical Theory and Methods", "MATH1012", 93, "HD"),
+
+  createData("Chinese 1", "CHIN1401", 71, "D"),
+  createData("Data Structures & Algorithms", "CITS2200", 94, "HD"),
+  createData("Intro to Applied Mathematics", "MATH2021", 76, "D"),
+  createData("Intro to Pure Mathematics", "MATH2031", 81, "HD"),
+
+  createData("Algorithms, Agents & Artificial Intelligence", "CITS3001", 88, "HD"),
+  createData("Topology and Analysis", "MATH3032", 97, "HD"),
+  createData("Mathematical Optimisation", "MATH4023", 82, "HD"),
+  createData("Fundamentals of Probability with Applications", "STAT2062", 83, "HD"),
 ]
