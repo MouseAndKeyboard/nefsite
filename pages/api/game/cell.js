@@ -3,7 +3,6 @@ export default (req, res) => {
     const cellLoc = req.query;
 
     if (cellLoc.r == "6" && cellLoc.c == "9") {
-      console.log("swag");
       res.json({
         "title": "🤔",
         "body": "what could this be?"
