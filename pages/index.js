@@ -46,7 +46,6 @@ export default function Home() {
               <a href="https://systemhealthlab.com/">System Health Lab</a>. In
               2019 I founded Steamhunt, a commercial data aggregation platform.{" "}
 
-              <Eye />
             </p>
             <p>
               {/* <em> */}
