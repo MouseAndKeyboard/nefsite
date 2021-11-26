@@ -16,3 +16,9 @@
     background-color: #4e6c9c;
     border: 1px solid #262624;
 }
+
+.loader {
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+}
