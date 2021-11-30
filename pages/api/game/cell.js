@@ -2,17 +2,15 @@ export default (req, res) => {
   if (req.method === "GET") {
     const cellLoc = req.query;
 
-    if (cellLoc.r == "6" && cellLoc.c == "9") {
-      res.json({
-        "title": "🤔",
-        "body": "what could this be?"
-      })
-    } else {
-      res.json({
-        "title": "Nothing here",
-        "body": "You look around, there's nothing to be seen..."
-      })
-    }
+    console.log(cellLoc)
+
+    res.json({
+      "title": "Embark",
+      "body": "Start your journey...",
+      "buttons": ["Embark"],
+      "row": cellLoc.r,
+      "col": cellLoc.c
+    })
   }
   if (req.method === "POST") {
     res.json(req)
