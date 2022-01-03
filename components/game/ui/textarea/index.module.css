@@ -23,7 +23,7 @@
     left: 10vw;
     bottom: 3vh;
     overflow: scroll;
-    opacity: 0.1;
+    opacity: 1;
     transition: opacity .1s ease-out;
     transition-delay: 0s;
 }

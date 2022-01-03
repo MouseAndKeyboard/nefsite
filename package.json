@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.2",
+    "@visx/visx": "^2.5.0",
+    "d3": "^7.2.1",
     "javascript-time-ago": "^2.3.4",
     "next": "10.0.4",
     "react": "^17.0.1",
