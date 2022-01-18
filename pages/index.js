@@ -1,19 +1,15 @@
-import Head from "next/head";
 import ContentBlock from "../components/ContentBlock.js";
 import React, { useState } from "react";
 import styles from "../styles/Home.module.css";
 import projects from "../components/data/projects.js";
 import news from "../components/data/news.js";
 import Eye from "../components/Eye.js";
+import Layout from "../components/Layout.js";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Michael Nefiodovas</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <Layout title={"Michael Nef"}>
+      <div className={styles.container}>
       <main className={styles.main}>
         <div className={styles.content}>
           <h1 className={styles.title}>Michael Nefiodovas</h1>
@@ -93,5 +89,6 @@ export default function Home() {
         </div>
       </footer>
     </div>
+    </Layout>
   );
 }
