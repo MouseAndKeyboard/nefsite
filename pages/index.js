@@ -58,7 +58,7 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.links}>
-            <a href="">CV</a> /{" "}
+            <a href="/resume.pdf">Resume</a> /{" "}
             <a href="https://github.com/MouseAndKeyboard">GitHub</a> /{" "}
             <a href="/grades">Grades</a>
             {/*  /{" "} */}
