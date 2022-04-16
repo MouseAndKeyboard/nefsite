@@ -6,7 +6,11 @@ import uniGrades from "../components/data/grades";
 
 const Grades = () => {
   const reducer = (total, cur) => total + cur.mark;
-  const wam = uniGrades.reduce(reducer, 0) / uniGrades.length;
+
+  const completedGrades = uniGrades
+    .filter(grade => grade.mark != "-");
+  console.log(completedGrades);
+  const wam = completedGrades.reduce(reducer, 0) / completedGrades.length;
 
   return (
     <div>

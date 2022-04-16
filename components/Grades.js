@@ -17,6 +17,14 @@ export const createData = (name, code, mark, grade) => ({
 
 const Grades = ({ grades }) => {
   grades.sort((a, b) => {
+    if (a.mark == b.mark) {
+      return 0;
+    } else if (a.mark == "-") {
+      return -1;
+    } else if (b.mark == "-") {
+      return 1;
+    }
+
     if (a.mark < b.mark) {
       return 1;
     } else if (a.mark > b.mark) {
@@ -25,8 +33,6 @@ const Grades = ({ grades }) => {
       return 0;
     }
   });
-
-  console.log(grades);
 
   const rows = grades.map((row) => (
     <TableRow key={row.code}>

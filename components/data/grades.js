@@ -31,4 +31,9 @@ export default [
   createData("Topology and Analysis", "MATH3032", 97, "HD"),
   createData("Mathematical Optimisation", "MATH4023", 82, "HD"),
   createData("Fundamentals of Probability with Applications", "STAT2062", 83, "HD"),
+
+  createData("Statistical Science", "STAT3062", "-", "-"),
+  createData("Random Processes and their Applications", "STAT3061", "-", "-"),
+  createData("Natural Langugage Processing", "CITS4012", "-", "-"),
+  createData("Algebraic Structures and Symmetry", "MATH3031", "-", "-"),
 ]
