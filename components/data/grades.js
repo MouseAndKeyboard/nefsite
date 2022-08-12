@@ -36,4 +36,9 @@ export default [
   createData("Random Processes and their Applications", "STAT3061", 93, "HD"),
   createData("Natural Langugage Processing", "CITS4012", 85, "HD"),
   createData("Algebraic Structures and Symmetry", "MATH3031", 90, "HD"),
+
+  createData("Introduction to Bayesian Computing and Statistics", "STAT3405", 100, "-"),
+  createData("Complex Systems", "MATH3024", 100, "-"),
+  createData("Statistical Learning", "STAT3064", 100, "-"),
+  createData("BPhil Research Project", "GCRL3000", 100, "-")
 ]
