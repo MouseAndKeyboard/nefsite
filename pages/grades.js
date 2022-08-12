@@ -8,7 +8,7 @@ const Grades = () => {
   const reducer = (total, cur) => total + cur.mark;
 
   const completedGrades = uniGrades
-    .filter(grade => grade.mark != "-");
+    .filter(grade => (grade.mark != "-") && (grade.mark != "Pass"));
   console.log(completedGrades);
   const wam = completedGrades.reduce(reducer, 0) / completedGrades.length;
 
