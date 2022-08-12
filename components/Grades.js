@@ -23,6 +23,10 @@ const Grades = ({ grades }) => {
       return -1;
     } else if (b.mark == "-") {
       return 1;
+    } else if (a.mark == "Pass") {
+      return -1;
+    } else if (b.mark == "Pass") {
+      return 1;
     }
 
     if (a.mark < b.mark) {
