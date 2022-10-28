@@ -15,7 +15,7 @@ export const createData = (name, code, mark, grade) => ({
   grade,
 });
 
-const Grades = ({ grades }) => {
+const Grades = ({ grades, pf }) => {
   grades.sort((a, b) => {
     if (a.mark == b.mark) {
       return 0;
@@ -49,7 +49,18 @@ const Grades = ({ grades }) => {
     </TableRow>
   ));
 
+  const pfrows = pf.map((row) => (
+    <TableRow key={row.code}>
+      <TableCell component="th" scope="row">
+        {row.name}
+      </TableCell>
+      <TableCell align="right">{row.code}</TableCell>
+      <TableCell align="right">{row.grade}</TableCell>
+    </TableRow>
+  ))
+
   return (
+    <>
     <TableContainer>
       <Table className={styles.table} aria-label="university grades table">
         <TableHead>
@@ -63,6 +74,20 @@ const Grades = ({ grades }) => {
         <TableBody>{rows}</TableBody>
       </Table>
     </TableContainer>
+    <h2>Pass/Fail Units</h2>
+    <TableContainer>
+      <Table className={styles.table} aria-label="university grades table">
+        <TableHead>
+          <TableRow>
+            <TableCell>Name</TableCell>
+            <TableCell align="right">Code</TableCell>
+            <TableCell align="right">Pass/Fail</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>{pfrows}</TableBody>
+      </Table>
+    </TableContainer>
+    </>
   );
 };
 

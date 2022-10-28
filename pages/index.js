@@ -2,7 +2,10 @@ import ContentBlock from "../components/ContentBlock.js";
 import React, { useState } from "react";
 import styles from "../styles/Home.module.css";
 import projects from "../components/data/projects.js";
+import teaching from "../components/data/teaching.js";
+import research from "../components/data/research.js";
 import news from "../components/data/news.js";
+import books from '../components/data/books.js';
 import Eye from "../components/Eye.js";
 import Layout from "../components/Layout.js";
 
@@ -26,6 +29,7 @@ export default function Home() {
 
           <div className={styles.bio}>
             <p>
+              <b>Anticipated Graduation: </b> November 2023 <br/>
               I am an undergraduate student undertaking the{" "}
               <a href="https://www.uwa.edu.au/study/courses/bachelor-of-philosophy">
                 Bachelor of Philosophy (Honours)
@@ -37,25 +41,9 @@ export default function Home() {
               at{" "}
               <a href="https://www.uwa.edu.au/">
                 The University of Western Australia
-              </a>
-              . I currently work as a Research Engineer at{" "}
-              <a href="https://systemhealthlab.com/">System Health Lab</a>. In
-              2019 I founded Steamhunt, a commercial data aggregation platform.{" "}
-
+              </a>.
             </p>
-            <p>
-              {/* <em> */}
-              {/*   I am interested in how we can use higher level mathematics to */}
-              {/*   formalise and interpret agent based systems. */}
-              {/* </em> */}
-            </p>
-            <p>
-              In 2019 I graduated from{" "}
-              <a href="https://www.duncraigshs.wa.edu.au/">
-                Duncraig Senior High School
-              </a>
-              {". "}
-            </p>
+            I am interested in all forms of optimisation: continuous time optimal control, reinforcement learning, convex optimisation, dynamic programming, etc.
           </div>
           <div className={styles.links}>
             <a href="/resume.pdf">Resume</a> /{" "}
@@ -68,8 +56,9 @@ export default function Home() {
           </div>
 
           <div className={styles.info}>
-            <ContentBlock heading="Projects" data={projects} />
-            <ContentBlock heading="News" data={news} />
+            <ContentBlock heading="Research Projects" data={research} />
+            <ContentBlock heading="Tutoring/Teaching" data={teaching} />
+            <ContentBlock heading="Major Projects" data={projects} />
           </div>
         </div>
       </main>

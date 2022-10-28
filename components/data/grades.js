@@ -41,5 +41,5 @@ export default [
   createData("Complex Systems", "MATH3024", "-", "-"),
   createData("Statistical Learning", "STAT3064", "-", "-"),
   createData("BPhil Research Project", "GCRL3000", "-", "-"),
-  createData("BPhil Research Placement", "GCRL2000", "Pass", "Pass")
+  
 ]

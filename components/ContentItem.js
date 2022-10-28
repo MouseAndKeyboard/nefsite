@@ -12,13 +12,23 @@ const ContentItem = ({title, date, description, image}) => {
 
     const timeAgo = new TimeAgo('en-US')
 
+    let date_component = <></>
+    if (date) {
+        date_component = (<>
+                        <p className={styles.date}>{date.getDate()}/{date.getMonth()}/{date.getFullYear()}</p>
+                        <em className={styles.muted}>{timeAgo.format(date)}</em>
+                    </>)
+    } else {
+        date_component = <></>
+    }
+    
 
     return(
         <div className={styles.item}>
             <img className={styles.image} src={src} alt={alt} />
             <h3 className={styles.title}>{title}</h3>
-            <p className={styles.date}>{date.getDate()}/{date.getMonth() + 1}/{date.getFullYear()}</p>
-            <em className={styles.muted}>{timeAgo.format(date)}</em>
+            {date_component}
+            
             <div className={styles.desc}>
                 {description}
             </div>
