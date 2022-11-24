@@ -39,5 +39,5 @@ export default [
 
   createData("Introduction to Bayesian Computing and Statistics", "STAT3405", "94", "HD"),
   createData("Complex Systems", "MATH3024", "97", "HD"),
-  createData("Statistical Learning", "STAT3064", "HD", "93"),
+  createData("Statistical Learning", "STAT3064", "93", "HD"),
 ]
