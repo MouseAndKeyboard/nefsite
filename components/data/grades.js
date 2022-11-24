@@ -37,7 +37,7 @@ export default [
   createData("Natural Langugage Processing", "CITS4012", 85, "HD"),
   createData("Algebraic Structures and Symmetry", "MATH3031", 90, "HD"),
 
-  createData("Introduction to Bayesian Computing and Statistics", "STAT3405", "94", "HD"),
-  createData("Complex Systems", "MATH3024", "97", "HD"),
-  createData("Statistical Learning", "STAT3064", "93", "HD"),
+  createData("Introduction to Bayesian Computing and Statistics", "STAT3405", 94, "HD"),
+  createData("Complex Systems", "MATH3024", 97, "HD"),
+  createData("Statistical Learning", "STAT3064", 93, "HD"),
 ]

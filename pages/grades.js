@@ -30,7 +30,7 @@ const Grades = () => {
           </h2>
           <p>
             GPA: 6.9 <span className={styles.weak}>(/7.0)</span> <br /> WAM:{" "}
-            {wam} <span className={styles.weak}>(/100.00)</span>
+            {Math.round(wam)} <span className={styles.weak}>(/100.00)</span>
           </p>
           <GradesPage grades={uniGrades} pf={pf} />
         </main>
