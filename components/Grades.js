@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Table from "@material-ui/core/Table";
 import TableContainer from "@material-ui/core/TableContainer";
 import TableBody from "@material-ui/core/TableBody";
@@ -7,13 +7,6 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import styles from "./Grades.module.css";
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles({
-  highlightrow: {
-    backgroundColor: '#F5F5F5',
-  },
-});
 
 export const createData = (name, code, mark, grade) => ({
   name,
@@ -23,7 +16,13 @@ export const createData = (name, code, mark, grade) => ({
 });
 
 const Grades = ({ grades, pf, hons }) => {
-  const classes = useStyles();
+  const [isClient, setIsClient] = useState(false);
+
+  // this effect will only run once
+  useEffect(() => {
+    setIsClient(true);
+  }, []); // empty dependency array means this effect will only run once
+
 
   grades.sort((a, b) => {
     if (a.mark == b.mark) {
@@ -48,18 +47,28 @@ const Grades = ({ grades, pf, hons }) => {
   });
 
   const makeGradeList = (g) => {
-    const rows = g.map((row) => (
-      <TableRow key={row.code} className={row.topgrade ? classes.highlightrow : ""}>
+    const rows = g.map((row) => {
+      const handleClick = () => {
+        if(isClient && row.url !== "") {
+          window.open(row.url, '_blank');
+        }
+      };
+      
+      return (
+      <TableRow key={row.code} 
+                style={row.topgrade ? {backgroundColor: '#F5F5F5', cursor: 'pointer'} : {}} 
+                onClick={handleClick}
+                >
         <TableCell component="th" scope="row">
           {row.name}
         </TableCell>
         <TableCell align="right">{row.code}</TableCell>
         <TableCell align="right">
-          {row.mark}{row.topgrade && "*"}
+          {row.mark}{row.topgrade && "*"}{row.code == "MATH4001" && <sup>†</sup>}
         </TableCell>
         <TableCell align="right">{row.grade}</TableCell>
       </TableRow>
-    ));
+    )});
 
     return rows;
   }
@@ -91,6 +100,7 @@ const Grades = ({ grades, pf, hons }) => {
     <>
     <h2>Honours</h2>
     *Top grade
+    <p><sup>†</sup>Course taken through the Australian Mathematical Sciences Institute. Topic was Mathematical Optimisation.</p>
     <TableContainer>
       <Table className={styles.table} aria-label="university grades table">
         <TableHead>
