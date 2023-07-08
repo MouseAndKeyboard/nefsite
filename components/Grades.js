@@ -7,6 +7,13 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import styles from "./Grades.module.css";
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  highlightrow: {
+    backgroundColor: '#F5F5F5',
+  },
+});
 
 export const createData = (name, code, mark, grade) => ({
   name,
@@ -15,7 +22,9 @@ export const createData = (name, code, mark, grade) => ({
   grade,
 });
 
-const Grades = ({ grades, pf }) => {
+const Grades = ({ grades, pf, hons }) => {
+  const classes = useStyles();
+
   grades.sort((a, b) => {
     if (a.mark == b.mark) {
       return 0;
@@ -38,16 +47,35 @@ const Grades = ({ grades, pf }) => {
     }
   });
 
-  const rows = grades.map((row) => (
-    <TableRow key={row.code}>
-      <TableCell component="th" scope="row">
-        {row.name}
-      </TableCell>
-      <TableCell align="right">{row.code}</TableCell>
-      <TableCell align="right">{row.mark}</TableCell>
-      <TableCell align="right">{row.grade}</TableCell>
-    </TableRow>
-  ));
+  const makeGradeList = (g) => {
+    const rows = g.map((row) => (
+      <TableRow key={row.code} className={row.topgrade ? classes.highlightrow : ""}>
+        <TableCell component="th" scope="row">
+          {row.name}
+        </TableCell>
+        <TableCell align="right">{row.code}</TableCell>
+        <TableCell align="right">
+          {row.mark}{row.topgrade && "*"}
+        </TableCell>
+        <TableCell align="right">{row.grade}</TableCell>
+      </TableRow>
+    ));
+
+    return rows;
+  }
+
+  hons.sort((a, b) => { 
+    if (a.mark < b.mark) {
+      return 1;
+    } else if (a.mark > b.mark) {
+      return -1;
+    } else {
+      return 0;
+    }
+  });
+
+  const rows = makeGradeList(grades);
+  const honsrows = makeGradeList(hons);
 
   const pfrows = pf.map((row) => (
     <TableRow key={row.code}>
@@ -57,10 +85,27 @@ const Grades = ({ grades, pf }) => {
       <TableCell align="right">{row.code}</TableCell>
       <TableCell align="right">{row.grade}</TableCell>
     </TableRow>
-  ))
+  ));
 
   return (
     <>
+    <h2>Honours</h2>
+    *Top grade
+    <TableContainer>
+      <Table className={styles.table} aria-label="university grades table">
+        <TableHead>
+          <TableRow>
+            <TableCell>Name</TableCell>
+            <TableCell align="right">Code</TableCell>
+            <TableCell align="right">Mark</TableCell>
+            <TableCell align="right">Grade</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>{honsrows}</TableBody>
+      </Table>
+    </TableContainer>
+    <h2>Undergraduate</h2>
+    *Top grade
     <TableContainer>
       <Table className={styles.table} aria-label="university grades table">
         <TableHead>

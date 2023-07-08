@@ -4,6 +4,7 @@ import React from "react";
 import styles from "../styles/Grades.module.css";
 import uniGrades from "../components/data/grades";
 import pf from '../components/data/pf';
+import honsGrades from "../components/data/hons_grades";
 
 const Grades = () => {
   const reducer = (total, cur) => total + cur.mark;
@@ -12,6 +13,8 @@ const Grades = () => {
     .filter(grade => (grade.mark != "-") && (grade.grade != "Pass"));
   console.log(completedGrades);
   const wam = completedGrades.reduce(reducer, 0) / completedGrades.length;
+
+  const honswam = honsGrades.reduce(reducer, 0) / honsGrades.length;
 
   return (
     <div>
@@ -29,10 +32,14 @@ const Grades = () => {
             Grades from The University of Western Australia
           </h2>
           <p>
-            GPA: 6.9 <span className={styles.weak}>(/7.0)</span> <br /> WAM:{" "}
+            Honours GPA: 7.0 <span className={styles.weak}>(/7.0)</span> <br /> Honours WAM:{" "}
+            {Math.round(honswam)} <span className={styles.weak}>(/100.00)</span>
+          </p>
+          <p>
+            Undergraduate GPA: 6.9 <span className={styles.weak}>(/7.0)</span> <br /> Undergraduate WAM:{" "}
             {Math.round(wam)} <span className={styles.weak}>(/100.00)</span>
           </p>
-          <GradesPage grades={uniGrades} pf={pf} />
+          <GradesPage grades={uniGrades} pf={pf} hons={honsGrades} />
         </main>
       </div>
     </div>
