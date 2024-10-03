@@ -29,21 +29,21 @@ export default function Home() {
 
           <div className={styles.bio}>
             <p>
-              <b>Anticipated Graduation: </b> November 2023 <br/>
-              I am an undergraduate student undertaking the{" "}
-              <a href="https://www.uwa.edu.au/study/courses/bachelor-of-philosophy">
+                First class honours (7/7 GPA) in <a href="https://www.uwa.edu.au/ems/schools/physics-mathematics-and-computing/mathematics-and-stats">
+                Mathematics and Statistics
+              </a>{" "} under the <a href="https://www.uwa.edu.au/study/courses/bachelor-of-philosophy">
                 Bachelor of Philosophy (Honours)
               </a>{" "}
-              degree with a major in{" "}
-              <a href="https://www.uwa.edu.au/ems/schools/physics-mathematics-and-computing/mathematics-and-stats">
-                Mathematics and Statistics
-              </a>{" "}
-              at{" "}
+              degree at the {" "}
               <a href="https://www.uwa.edu.au/">
                 The University of Western Australia
               </a>.
+            
             </p>
-            I am interested in all forms of optimisation: continuous time optimal control, reinforcement learning, convex optimisation, dynamic programming, etc.
+            My dissertation was titled "Inverse Problems in Lagrangian and Hamiltonian Mechanics". I conducted this research under the supervision of Professor Lyle Noakes. My research focused on applying aspects of Hodge theory to the inverse problem in Hamiltonian mechanics, we also discuss many inverse problems in the calculus of variations. I developed a new algorithms for solving the inverse problem in Hamiltonian mechanics by applying ideas from Hodge theory.
+            <br/>
+            <br/>
+            One simple idea for an application of my research: If we observe a collection of timeseries measurements of a system which we believe is governed by a Hamiltonian system, our algorithm can efficiently determine the Hamiltonian function which governs the system, hence allowing us to make future predictions and understand symmetries inherent in our timeseries. This has applications in many areas of science and engineering, such as in the study of fluid dynamics, quantum mechanics, and celestial mechanics.
           </div>
           <div className={styles.links}>
             <a href="/resume.pdf">Resume</a> /{" "}

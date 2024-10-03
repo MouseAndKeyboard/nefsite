@@ -32,8 +32,9 @@ const Grades = () => {
             Grades from The University of Western Australia
           </h2>
           <p>
+            First Class Honours in Mathematics and Statistics <br />
             Honours GPA: 7.0 <span className={styles.weak}>(/7.0)</span> <br /> Honours WAM:{" "}
-            {Math.round(honswam)} <span className={styles.weak}>(/100.00)</span>
+            91.25 <span className={styles.weak}>(/100.00)</span>
           </p>
           <p>
             Undergraduate GPA: 6.9 <span className={styles.weak}>(/7.0)</span> <br /> Undergraduate WAM:{" "}

@@ -49,7 +49,8 @@ const Grades = ({ grades, pf, hons }) => {
   const makeGradeList = (g) => {
     const rows = g.map((row) => {
       const handleClick = () => {
-        if(isClient && row.url !== "") {
+        if(row.url !== "") {
+          console.log(row.url);
           window.open(row.url, '_blank');
         }
       };
